@@ -1,0 +1,115 @@
+/* ============================================
+   MELOVAR'S TALE — Design Tokens
+   Azure Blue & Fire Orange Theme
+   ============================================ */
+
+:root {
+  /* ── Azure Blue Palette ── */
+  --azure-50:  hsl(210, 100%, 95%);
+  --azure-100: hsl(210, 100%, 88%);
+  --azure-200: hsl(210, 100%, 78%);
+  --azure-300: hsl(210, 100%, 68%);
+  --azure-400: hsl(210, 100%, 56%);
+  --azure-500: hsl(210, 100%, 50%);
+  --azure-600: hsl(210, 100%, 42%);
+  --azure-700: hsl(210, 100%, 34%);
+  --azure-800: hsl(215, 80%, 22%);
+  --azure-900: hsl(215, 50%, 10%);
+
+  /* ── Fire Orange Palette ── */
+  --fire-50:  hsl(35, 100%, 95%);
+  --fire-100: hsl(35, 100%, 88%);
+  --fire-200: hsl(32, 100%, 78%);
+  --fire-300: hsl(30, 100%, 65%);
+  --fire-400: hsl(25, 100%, 55%);
+  --fire-500: hsl(20, 100%, 50%);
+  --fire-600: hsl(15, 100%, 42%);
+  --fire-700: hsl(12, 100%, 35%);
+  --fire-800: hsl(10, 80%, 25%);
+
+  /* ── Surface / Background ── */
+  --surface-950: hsl(220, 30%, 5%);
+  --surface-900: hsl(220, 25%, 8%);
+  --surface-850: hsl(220, 22%, 11%);
+  --surface-800: hsl(220, 20%, 14%);
+  --surface-700: hsl(220, 18%, 20%);
+  --surface-600: hsl(220, 15%, 28%);
+
+  /* ── Text ── */
+  --text-primary: hsl(210, 20%, 93%);
+  --text-secondary: hsl(210, 15%, 75%);
+  --text-muted: hsl(210, 12%, 55%);
+  --text-dim: hsl(210, 10%, 40%);
+
+  /* ── Gradients ── */
+  --gradient-azure: linear-gradient(135deg, var(--azure-400), var(--azure-600));
+  --gradient-fire: linear-gradient(135deg, var(--fire-300), var(--fire-600));
+  --gradient-azure-fire: linear-gradient(135deg, var(--azure-400), var(--fire-500));
+  --gradient-fire-glow: linear-gradient(135deg, var(--fire-400), var(--fire-600));
+  --gradient-hero-overlay: linear-gradient(
+    180deg,
+    transparent 0%,
+    hsla(220, 30%, 5%, 0.3) 40%,
+    hsla(220, 30%, 5%, 0.85) 75%,
+    var(--surface-950) 100%
+  );
+  --gradient-hero-overlay-left: linear-gradient(
+    90deg,
+    hsla(220, 30%, 5%, 0.95) 0%,
+    hsla(220, 30%, 5%, 0.7) 35%,
+    hsla(220, 30%, 5%, 0.3) 55%,
+    transparent 75%
+  );
+
+  /* ── Shadows & Glows ── */
+  --glow-azure: 0 0 30px hsla(210, 100%, 56%, 0.3);
+  --glow-azure-sm: 0 0 15px hsla(210, 100%, 56%, 0.2);
+  --glow-fire: 0 0 30px hsla(20, 100%, 50%, 0.3);
+  --glow-fire-sm: 0 0 15px hsla(20, 100%, 50%, 0.2);
+  --glow-text-azure: 0 0 20px hsla(210, 100%, 56%, 0.4);
+  --glow-text-fire: 0 0 20px hsla(20, 100%, 50%, 0.4);
+  --shadow-card: 0 8px 32px hsla(0, 0%, 0%, 0.4);
+  --shadow-elevated: 0 16px 48px hsla(0, 0%, 0%, 0.5);
+
+  /* ── Glassmorphism ── */
+  --glass-bg: hsla(220, 25%, 8%, 0.7);
+  --glass-bg-light: hsla(220, 25%, 12%, 0.6);
+  --glass-border: hsla(210, 40%, 40%, 0.15);
+  --glass-border-hover: hsla(210, 40%, 50%, 0.25);
+  --glass-blur: blur(20px);
+
+  /* ── Typography ── */
+  --font-heading: 'Cinzel', 'Cinzel Decorative', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-accent: 'Cinzel Decorative', 'Cinzel', Georgia, serif;
+
+  /* ── Spacing Scale ── */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+
+  /* ── Border Radius ── */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* ── Transitions ── */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+  --transition-spring: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Layout ── */
+  --container-max: 1200px;
+  --container-wide: 1400px;
+  --header-height: 72px;
+}
