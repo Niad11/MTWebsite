@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art Gallery — Melovar's Tale</title>
+  <meta name="description" content="Explore the stunning hand-crafted artwork of Melovar's Tale. Browse legendary cards, powerful relics, and character art from the dark fantasy world.">
+
+  <meta property="og:title" content="Art Gallery — Melovar's Tale">
+  <meta property="og:description" content="Stunning hand-crafted card art, legendary relics, and character artwork.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.melovarstale.com/art">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cinzel+Decorative:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/art.css">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚔️</text></svg>">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" id="logo">
+        <div class="logo-icon">⚔</div>
+        <span>Melovar's Tale</span>
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+          <li><a href="game.html" class="nav-link" id="nav-game">The Game</a></li>
+          <li><a href="art.html" class="nav-link active" id="nav-art">Art</a></li>
+          <li><a href="lore.html" class="nav-link" id="nav-lore">Lore</a></li>
+          <li><a href="developer.html" class="nav-link" id="nav-developer">Developer</a></li>
+        </ul>
+        <a href="steam.html" class="nav-cta" id="nav-steam">Wishlist on Steam</a>
+      </nav>
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle mobile menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="game.html" class="nav-link">The Game</a>
+    <a href="art.html" class="nav-link active">Art</a>
+    <a href="lore.html" class="nav-link">Lore</a>
+    <a href="developer.html" class="nav-link">Developer</a>
+    <a href="steam.html" class="nav-cta">Wishlist on Steam</a>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="art-hero" id="art-hero">
+      <div class="art-hero-bg">
+        <img src="assets/website_images/Melovar - Webpage 5.png" alt="Epic clash of swords" loading="eager">
+      </div>
+      <div class="art-hero-overlay"></div>
+      <div class="art-hero-content">
+        <div class="badge badge-azure" style="margin-bottom: var(--space-lg);">🎨 Hand-Crafted</div>
+        <h1>Art Gallery</h1>
+        <p>Every card and relic in Melovar's Tale features stunning, hand-crafted artwork. Legendary items come alive with animated art.</p>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section gallery-section" id="gallery-section">
+      <div class="ambient-grid"></div>
+      <div class="container" style="max-width: var(--container-wide);">
+
+        <!-- Filter Tabs -->
+        <div class="gallery-tabs reveal">
+          <button class="gallery-tab active" data-filter="all">All</button>
+          <button class="gallery-tab" data-filter="card">Cards</button>
+          <button class="gallery-tab" data-filter="relic">Relics</button>
+          <button class="gallery-tab" data-filter="character">Characters</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+
+          <!-- LEGENDARY CARDS (MP4) -->
+          <div class="gallery-item reveal" data-category="card" data-title="Legacy of Melovar" data-type="Legendary Card" data-media="video" data-src="assets/cards/legacy_of_melovar.mp4">
+            <span class="video-badge">✦ Animated</span>
+            <video autoplay muted loop playsinline>
+              <source src="assets/cards/legacy_of_melovar.mp4" type="video/mp4">
+            </video>
+            <div class="gallery-item-overlay">
+              <h4>Legacy of Melovar</h4>
+              <span class="legendary">Legendary Card</span>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="card" data-title="Avatar of Fire" data-type="Legendary Card" data-media="video" data-src="assets/cards/avatar_of_fire.mp4">
+            <span class="video-badge">✦ Animated</span>
+            <video autoplay muted loop playsinline>
+              <source src="assets/cards/avatar_of_fire.mp4" type="video/mp4">
+            </video>
+            <div class="gallery-item-overlay">
+              <h4>Avatar of Fire</h4>
+              <span class="legendary">Legendary Card</span>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="card" data-title="Crimson Tide" data-type="Legendary Card" data-media="video" data-src="assets/cards/crimson_tide.mp4">
+            <span class="video-badge">✦ Animated</span>
+            <video autoplay muted loop playsinline>
+              <source src="assets/cards/crimson_tide.mp4" type="video/mp4">
+            </video>
+            <div class="gallery-item-overlay">
+              <h4>Crimson Tide</h4>
+              <span class="legendary">Legendary Card</span>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="card" data-title="Elemental Burst" data-type="Legendary Card" data-media="video" data-src="assets/cards/elemental_burst.mp4">
+            <span class="video-badge">✦ Animated</span>
+            <video autoplay muted loop playsinline>
+              <source src="assets/cards/elemental_burst.mp4" type="video/mp4">
+            </video>
+            <div class="gallery-item-overlay">
+              <h4>Elemental Burst</h4>
+              <span class="legendary">Legendary Card</span>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="card" data-title="Realm Protector" data-type="Legendary Card" data-media="video" data-src="assets/cards/realm_protector.mp4">
+            <span class="video-badge">✦ Animated</span>
+            <video autoplay muted loop playsinline>
+              <source src="assets/cards/realm_protector.mp4" type="video/mp4">
+            </video>
+            <div class="gallery-item-overlay">
+              <h4>Realm Protector</h4>
+              <span class="legendary">Legendary Card</span>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="card" data-title="Eternal Tempest" data-type="Legendary Card" data-media="video" data-src="assets/cards/eternal_tempest.mp4">
+            <span class="video-badge">✦ Animated</span>
+            <video autoplay muted loop playsinline>
+              <source src="assets/cards/eternal_tempest.mp4" type="video/mp4">
+            </video>
+            <div class="gallery-item-overlay">
+              <h4>Eternal Tempest</h4>
+              <span class="legendary">Legendary Card</span>
+            </div>
+          </div>
+
+          <!-- STATIC CARDS -->
+          <div class="gallery-item reveal" data-category="card" data-title="Flame Strike" data-type="Attack Card" data-media="image">
+            <img src="assets/cards/flame_strike.png" alt="Flame Strike" loading="lazy">
+            <div class="gallery-item-overlay">
+              <h4>Flame Strike</h4>
+              <span>Attack Card</span>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="card" data-title="Arcane Nova" data-type="Skill Card" data-media="image">
+            <img src="assets/cards/arcane_nova.png" alt="Arcane Nova" loading="lazy">
+            <div class="gallery-item-overlay">
+              <h4>Arcane Nova</h4>
+              <span>Skill Card</span>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="card" data-title="Dragon's Heart" data-type="Defense Card" data-media="image">
+            <img src="assets/cards/dragons_heart.png" alt="Dragon's Heart" loading="lazy">
+            <div class="gallery-item-overlay">
+              <h4>Dragon's Heart</h4>
+              <span>Defense Card</span>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="card" data-title="Death Blossom" data-type="Attack Card" data-media="image">
+            <img src="assets/cards/death_blossom.png" alt="Death Blossom" loading="lazy">
+            <div class="gallery-item-overlay">
+              <h4>Death Blossom</h4>
+              <span>Attack Card</span>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="card" data-title="Phoenix Rebirth" data-type="Skill Card" data-media="image">
+            <img src="assets/cards/phoenix_rebirth.png" alt="Phoenix Rebirth" loading="lazy">
+            <div class="gallery-item-overlay">
+              <h4>Phoenix Rebirth</h4>
+              <span>Skill Card</span>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="card" data-title="Glacial Cascade" data-type="Attack Card" data-media="image">
+            <img src="assets/cards/glacial_cascade.png" alt="Glacial Cascade" loading="lazy">
+            <div class="gallery-item-overlay">
+              <h4>Glacial Cascade</h4>
+              <span>Attack Card</span>
+            </div>
+          </div>
+
+          <!-- LEGENDARY RELICS (MP4) -->
+          <div class="gallery-item reveal" data-category="relic" data-title="Melovar's Sword" data-type="Legendary Relic" data-media="video" data-src="assets/relics/melovars_sword.mp4">
+            <span class="video-badge">✦ Animated</span>
+            <video autoplay muted loop playsinline>
+              <source src="assets/relics/melovars_sword.mp4" type="video/mp4">
+            </video>
+            <div class="gallery-item-overlay">
+              <h4>Melovar's Sword</h4>
+              <span class="legendary">Legendary Relic</span>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="relic" data-title="Heart of Draefus" data-type="Legendary Relic" data-media="video" data-src="assets/relics/heart_of_draefus.mp4">
+            <span class="video-badge">✦ Animated</span>
+            <video autoplay muted loop playsinline>
+              <source src="assets/relics/heart_of_draefus.mp4" type="video/mp4">
+            </video>
+            <div class="gallery-item-overlay">
+              <h4>Heart of Draefus</h4>
+              <span class="legendary">Legendary Relic</span>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="relic" data-title="Phoenix Feather" data-type="Legendary Relic" data-media="video" data-src="assets/relics/phoenix_feather.mp4">
+            <span class="video-badge">✦ Animated</span>
+            <video autoplay muted loop playsinline>
+              <source src="assets/relics/phoenix_feather.mp4" type="video/mp4">
+            </video>
+            <div class="gallery-item-overlay">
+              <h4>Phoenix Feather</h4>
+              <span class="legendary">Legendary Relic</span>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="relic" data-title="Eye of Anubis" data-type="Legendary Relic" data-media="video" data-src="assets/relics/eye_of_anubis.mp4">
+            <span class="video-badge">✦ Animated</span>
+            <video autoplay muted loop playsinline>
+              <source src="assets/relics/eye_of_anubis.mp4" type="video/mp4">
+            </video>
+            <div class="gallery-item-overlay">
+              <h4>Eye of Anubis</h4>
+              <span class="legendary">Legendary Relic</span>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="relic" data-title="Crown of the Fallen King" data-type="Legendary Relic" data-media="video" data-src="assets/relics/crown_of_the_fallen_king.mp4">
+            <span class="video-badge">✦ Animated</span>
+            <video autoplay muted loop playsinline>
+              <source src="assets/relics/crown_of_the_fallen_king.mp4" type="video/mp4">
+            </video>
+            <div class="gallery-item-overlay">
+              <h4>Crown of the Fallen King</h4>
+              <span class="legendary">Legendary Relic</span>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="relic" data-title="Infinity Loop" data-type="Legendary Relic" data-media="video" data-src="assets/relics/infinity_loop.mp4">
+            <span class="video-badge">✦ Animated</span>
+            <video autoplay muted loop playsinline>
+              <source src="assets/relics/infinity_loop.mp4" type="video/mp4">
+            </video>
+            <div class="gallery-item-overlay">
+              <h4>Infinity Loop</h4>
+              <span class="legendary">Legendary Relic</span>
+            </div>
+          </div>
+
+          <!-- CHARACTER ART -->
+          <div class="gallery-item reveal" data-category="character" data-title="Lord Melovar" data-type="Character Art" data-media="image">
+            <img src="assets/website_images/Melovar - Webpage.png" alt="Lord Melovar" loading="lazy">
+            <div class="gallery-item-overlay">
+              <h4>Lord Melovar</h4>
+              <span>Character Art</span>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="character" data-title="The Confrontation" data-type="Scene Art" data-media="image">
+            <img src="assets/website_images/Melovar - Webpage 2.png" alt="The Confrontation" loading="lazy">
+            <div class="gallery-item-overlay">
+              <h4>The Confrontation</h4>
+              <span>Scene Art</span>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="character" data-title="Guardian of Stormgale" data-type="Character Art" data-media="image">
+            <img src="assets/website_images/Melovar - Webpage 3.jpg" alt="Melovar at Stormgale" loading="lazy">
+            <div class="gallery-item-overlay">
+              <h4>Guardian of Stormgale</h4>
+              <span>Character Art</span>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="character" data-title="Commander's Call" data-type="Scene Art" data-media="image">
+            <img src="assets/website_images/Melovar - Webpage 4.jpg" alt="Melovar with army" loading="lazy">
+            <div class="gallery-item-overlay">
+              <h4>Commander's Call</h4>
+              <span>Scene Art</span>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="character" data-title="Clash of Titans" data-type="Scene Art" data-media="image">
+            <img src="assets/website_images/Melovar - Webpage 5.png" alt="The final clash" loading="lazy">
+            <div class="gallery-item-overlay">
+              <h4>Clash of Titans</h4>
+              <span>Scene Art</span>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="character" data-title="Blood Knight Draefus" data-type="Character Art" data-media="image">
+            <img src="assets/images/blood-knight-draefus.jpg" alt="Blood Knight Draefus" loading="lazy">
+            <div class="gallery-item-overlay">
+              <h4>Blood Knight Draefus</h4>
+              <span>Character Art</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section" id="art-cta">
+      <div class="ambient-grid"></div>
+      <div class="container">
+        <div class="cta-content reveal">
+          <h2>Every Card Tells a Story</h2>
+          <p>Discover 300+ uniquely crafted cards and 122 relics in Melovar's Tale.</p>
+          <div class="cta-actions">
+            <a href="steam.html" class="btn btn-primary btn-lg">Wishlist on Steam</a>
+            <a href="game.html" class="btn btn-secondary btn-lg">Explore the Game</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close">&times;</button>
+    <div class="lightbox-content" id="lightbox-content"></div>
+    <div class="lightbox-caption">
+      <h3 id="lightbox-caption-title"></h3>
+      <span id="lightbox-caption-type"></span>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">⚔</div>
+            <span>Melovar's Tale</span>
+          </a>
+          <p>A premium roguelike deckbuilder card game. Forge your deck, face the darkness, and write your tale.</p>
+        </div>
+        <div class="footer-nav">
+          <h4 class="footer-heading">Explore</h4>
+          <div class="footer-links">
+            <a href="game.html">The Game</a>
+            <a href="art.html">Art Gallery</a>
+            <a href="lore.html">Lore & World</a>
+            <a href="developer.html">Developer</a>
+            <a href="steam.html">Steam</a>
+          </div>
+        </div>
+        <div class="footer-connect">
+          <h4 class="footer-heading">Connect</h4>
+          <div class="footer-social">
+            <a href="#" aria-label="Discord"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286z"/></svg></a>
+            <a href="#" aria-label="Twitter / X"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Melovar's Tale. All rights reserved.</span>
+        <span>A Dark Fantasy Deckbuilder</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>

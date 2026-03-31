@@ -1,0 +1,253 @@
+/* ============================================
+   MELOVAR'S TALE — Developer Page
+   ============================================ */
+
+/* ── Dev Hero ── */
+.dev-hero {
+  position: relative;
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.dev-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.dev-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.dev-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    var(--surface-950) 0%,
+    hsla(220, 30%, 5%, 0.85) 40%,
+    hsla(220, 30%, 5%, 0.5) 70%,
+    hsla(220, 30%, 5%, 0.3) 100%
+  );
+  z-index: 1;
+}
+
+.dev-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  width: 100%;
+  padding: var(--space-4xl) var(--space-xl);
+}
+
+.dev-hero-content .dev-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--azure-400);
+  margin-bottom: var(--space-lg);
+}
+
+.dev-hero-content h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  background: var(--gradient-azure-fire);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--space-lg);
+  max-width: 600px;
+}
+
+.dev-hero-content .dev-intro {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 50ch;
+  line-height: 1.8;
+}
+
+/* ── Developer Story ── */
+.dev-story {
+  position: relative;
+  padding: var(--space-5xl) 0;
+}
+
+.dev-story-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.dev-quote-block {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-3xl);
+  margin-bottom: var(--space-3xl);
+  position: relative;
+}
+
+.dev-quote-block::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: var(--space-xl);
+  font-family: var(--font-accent);
+  font-size: 5rem;
+  color: var(--fire-400);
+  opacity: 0.3;
+  line-height: 1;
+}
+
+.dev-quote-block p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.85;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+
+.dev-quote-block .attribution {
+  margin-top: var(--space-lg);
+  font-style: normal;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  color: var(--fire-400);
+  letter-spacing: 0.08em;
+}
+
+/* ── Origin Story Sections ── */
+.dev-section {
+  margin-bottom: var(--space-3xl);
+}
+
+.dev-section h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: var(--space-lg);
+  color: var(--text-primary);
+}
+
+.dev-section h2 .text-azure { color: var(--azure-400); }
+.dev-section h2 .text-fire { color: var(--fire-400); }
+
+.dev-section p {
+  color: var(--text-secondary);
+  line-height: 1.85;
+  margin-bottom: var(--space-lg);
+  font-size: 1rem;
+}
+
+/* ── Character Bio Card ── */
+.character-bio-card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  margin: var(--space-3xl) 0;
+}
+
+.character-bio-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.character-bio-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 400px;
+}
+
+.character-bio-details {
+  padding: var(--space-2xl);
+}
+
+.bio-stat {
+  display: flex;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+  align-items: baseline;
+}
+
+.bio-stat-label {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--azure-400);
+  min-width: 100px;
+}
+
+.bio-stat-value {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.character-bio-details blockquote {
+  border-left: 3px solid var(--fire-400);
+  padding-left: var(--space-lg);
+  margin: var(--space-xl) 0;
+  font-family: var(--font-heading);
+  font-style: italic;
+  color: var(--fire-300);
+  font-size: 1rem;
+  text-shadow: var(--glow-text-fire);
+}
+
+/* ── Fun Fact Banner ── */
+.fun-fact-banner {
+  background: linear-gradient(135deg, hsla(210, 100%, 50%, 0.08), hsla(20, 100%, 50%, 0.08));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  text-align: center;
+  margin: var(--space-3xl) 0;
+}
+
+.fun-fact-banner .fun-label {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--fire-400);
+  margin-bottom: var(--space-sm);
+}
+
+.fun-fact-banner p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 60ch;
+  margin: 0 auto;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .character-bio-card {
+    grid-template-columns: 1fr;
+  }
+
+  .character-bio-image img {
+    min-height: 250px;
+  }
+
+  .dev-hero {
+    min-height: 50vh;
+  }
+}

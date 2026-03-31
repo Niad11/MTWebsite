@@ -1,0 +1,290 @@
+/* ============================================
+   MELOVAR'S TALE — Art Gallery Page
+   ============================================ */
+
+/* ── Art Hero ── */
+.art-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.art-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.art-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.art-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    hsla(220, 30%, 5%, 0.3) 0%,
+    hsla(220, 30%, 5%, 0.7) 50%,
+    var(--surface-950) 100%
+  );
+  z-index: 1;
+}
+
+.art-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: var(--space-4xl) 0;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  width: 100%;
+  padding-left: var(--space-xl);
+  padding-right: var(--space-xl);
+  text-align: center;
+}
+
+.art-hero-content h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  background: var(--gradient-azure-fire);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--space-md);
+}
+
+.art-hero-content p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 50ch;
+  margin: 0 auto;
+}
+
+/* ── Gallery Filter Tabs ── */
+.gallery-section {
+  position: relative;
+  padding: var(--space-5xl) 0;
+}
+
+.gallery-tabs {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-3xl);
+  flex-wrap: wrap;
+}
+
+.gallery-tab {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-full);
+  padding: 0.6rem 1.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.gallery-tab:hover {
+  color: var(--text-primary);
+  border-color: var(--glass-border-hover);
+}
+
+.gallery-tab.active {
+  color: var(--azure-400);
+  border-color: var(--azure-500);
+  background: hsla(210, 100%, 50%, 0.08);
+  box-shadow: var(--glow-azure-sm);
+}
+
+/* ── Gallery Grid ── */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-lg);
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  aspect-ratio: 3 / 4;
+  background: var(--surface-800);
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px) scale(1.02);
+  border-color: var(--glass-border-hover);
+  box-shadow: var(--shadow-elevated), var(--glow-azure-sm);
+}
+
+.gallery-item img,
+.gallery-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.gallery-item:hover img,
+.gallery-item:hover video {
+  transform: scale(1.08);
+}
+
+.gallery-item-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-lg);
+  background: linear-gradient(transparent, hsla(0, 0%, 0%, 0.85));
+  transform: translateY(100%);
+  transition: transform var(--transition-base);
+}
+
+.gallery-item:hover .gallery-item-overlay {
+  transform: translateY(0);
+}
+
+.gallery-item-overlay h4 {
+  font-size: 0.9rem;
+  font-family: var(--font-heading);
+  margin-bottom: 2px;
+}
+
+.gallery-item-overlay span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.gallery-item-overlay span.legendary {
+  color: var(--fire-400);
+}
+
+/* ── Video badge for MP4 items ── */
+.gallery-item .video-badge {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  background: hsla(20, 100%, 50%, 0.9);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-full);
+  z-index: 2;
+  box-shadow: var(--glow-fire-sm);
+}
+
+/* ── Lightbox ── */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: hsla(0, 0%, 0%, 0.92);
+  backdrop-filter: blur(10px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-base);
+}
+
+.lightbox.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.lightbox-content {
+  max-width: 90vw;
+  max-height: 85vh;
+  position: relative;
+}
+
+.lightbox-content img,
+.lightbox-content video {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-elevated);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: var(--space-xl);
+  right: var(--space-xl);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-base);
+  z-index: 10001;
+}
+
+.lightbox-close:hover {
+  background: var(--fire-500);
+  color: white;
+  border-color: var(--fire-500);
+}
+
+.lightbox-caption {
+  position: absolute;
+  bottom: var(--space-2xl);
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 10001;
+}
+
+.lightbox-caption h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.lightbox-caption span {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+
+  .art-hero {
+    min-height: 45vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}

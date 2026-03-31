@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Game — Melovar's Tale</title>
+  <meta name="description" content="Discover the mechanics of Melovar's Tale — 300+ cards, 122 relics, roguelike deckbuilding, multiple heroes, and deep meta progression.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="The Game — Melovar's Tale">
+  <meta property="og:description" content="Forge your deck. Face the darkness. A premium roguelike deckbuilder.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.melovarstale.com/game">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cinzel+Decorative:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/game.css">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚔️</text></svg>">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" id="logo">
+        <div class="logo-icon">⚔</div>
+        <span>Melovar's Tale</span>
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+          <li><a href="game.html" class="nav-link active" id="nav-game">The Game</a></li>
+          <li><a href="art.html" class="nav-link" id="nav-art">Art</a></li>
+          <li><a href="lore.html" class="nav-link" id="nav-lore">Lore</a></li>
+          <li><a href="developer.html" class="nav-link" id="nav-developer">Developer</a></li>
+        </ul>
+        <a href="steam.html" class="nav-cta" id="nav-steam">Wishlist on Steam</a>
+      </nav>
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle mobile menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="game.html" class="nav-link active">The Game</a>
+    <a href="art.html" class="nav-link">Art</a>
+    <a href="lore.html" class="nav-link">Lore</a>
+    <a href="developer.html" class="nav-link">Developer</a>
+    <a href="steam.html" class="nav-cta">Wishlist on Steam</a>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="game-hero" id="game-hero">
+      <div class="game-hero-bg">
+        <img src="assets/website_images/Melovar - Webpage 4.jpg" alt="Melovar commanding his army" loading="eager">
+      </div>
+      <div class="game-hero-overlay"></div>
+      <div class="game-hero-content">
+        <div class="badge badge-fire" style="margin-bottom: var(--space-lg);">⚔ Roguelike Deckbuilder</div>
+        <h1>The Game</h1>
+        <p class="hero-tagline">
+          Melovar's Tale is a premium roguelike deckbuilder where every card drawn, every relic discovered, 
+          and every decision made carves a unique path through a world of fire and shadow.
+        </p>
+      </div>
+    </section>
+
+    <!-- PILLAR: CARDS -->
+    <section class="section pillar-section" id="pillar-cards">
+      <div class="ambient-grid"></div>
+      <div class="container">
+        <div class="pillar-block reveal">
+          <div class="pillar-text">
+            <div class="badge badge-fire" style="margin-bottom: var(--space-lg);">Core Mechanic</div>
+            <h2>300+ <span class="text-fire">Unique Cards</span></h2>
+            <p>
+              Every card in Melovar's Tale has been hand-crafted with stunning artwork and deliberate mechanical design. 
+              From devastating fire strikes to impenetrable ice barriers, each card offers unique strategic possibilities.
+            </p>
+            <p>
+              Build synergies across attack, defense, and skill archetypes. Discover powerful combos that chain across 
+              card types — ignite enemies with flame spells, then shield yourself with the ember's residual energy. 
+              The possibilities are as vast as the darkness you face.
+            </p>
+            <div class="pillar-stats">
+              <div class="pillar-stat-item">
+                <div class="pillar-stat-number fire">300+</div>
+                <div class="pillar-stat-label">Cards</div>
+              </div>
+              <div class="pillar-stat-item">
+                <div class="pillar-stat-number azure">6</div>
+                <div class="pillar-stat-label">Archetypes</div>
+              </div>
+              <div class="pillar-stat-item">
+                <div class="pillar-stat-number fire">∞</div>
+                <div class="pillar-stat-label">Combos</div>
+              </div>
+            </div>
+          </div>
+          <div class="pillar-media">
+            <video autoplay muted loop playsinline>
+              <source src="assets/cards/legacy_of_melovar.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <!-- PILLAR: RELICS -->
+        <div class="pillar-block reversed reveal">
+          <div class="pillar-text">
+            <div class="badge badge-azure" style="margin-bottom: var(--space-lg);">Game Changer</div>
+            <h2>122 <span class="text-azure">Powerful Relics</span></h2>
+            <p>
+              Relics are the artifacts that define your run. Each one bends the rules of the game in unique and 
+              powerful ways — from triggering extra card draws to doubling your damage under specific conditions.
+            </p>
+            <p>
+              Discover the legendary relics that reshape entire strategies. Melovar's Sword channels the fire of 
+              creation itself. The Heart of Draefus pulses with dark, undying energy. Stack synergies, trigger 
+              chain reactions, and watch your build come alive.
+            </p>
+            <div class="pillar-stats">
+              <div class="pillar-stat-item">
+                <div class="pillar-stat-number azure">122</div>
+                <div class="pillar-stat-label">Relics</div>
+              </div>
+              <div class="pillar-stat-item">
+                <div class="pillar-stat-number fire">4</div>
+                <div class="pillar-stat-label">Raritys</div>
+              </div>
+              <div class="pillar-stat-item">
+                <div class="pillar-stat-number azure">16</div>
+                <div class="pillar-stat-label">Legendary</div>
+              </div>
+            </div>
+          </div>
+          <div class="pillar-media">
+            <video autoplay muted loop playsinline>
+              <source src="assets/relics/melovars_sword.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <!-- PILLAR: ROGUELIKE -->
+        <div class="pillar-block reveal">
+          <div class="pillar-text">
+            <div class="badge badge-fire" style="margin-bottom: var(--space-lg);">Infinite Replayability</div>
+            <h2>Roguelike <span class="text-fire">Depth</span></h2>
+            <p>
+              No two runs of Melovar's Tale are ever the same. Navigate procedurally generated maps with branching 
+              paths, discover mysterious events that test your decision-making, and face escalating encounters that 
+              push your deck to its limits.
+            </p>
+            <p>
+              Choose between risk and reward at every crossroads. Will you take the shortcut through the Infernal 
+              Core for rare loot, or play it safe through the Frozen Reaches? Every choice matters. Every path 
+              tells a different story.
+            </p>
+          </div>
+          <div class="pillar-media">
+            <img src="assets/website_images/Melovar - Webpage 2.png" alt="Epic confrontation between hero and villain" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MECHANICS GRID -->
+    <section class="section mechanics-section" id="mechanics-section">
+      <div class="ambient-grid"></div>
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>Core Mechanics</h2>
+          <span class="heading-line"></span>
+          <p>Every system in Melovar's Tale is designed to create deep, rewarding gameplay.</p>
+        </div>
+
+        <div class="mechanics-grid">
+          <div class="mechanic-card reveal reveal-delay-1">
+            <span class="mechanic-icon">⚔️</span>
+            <h3>Strategic Combat</h3>
+            <p>A 13-stage combat pipeline with status effects, keyword interactions, and tactical depth that rewards mastery and creative thinking.</p>
+          </div>
+          <div class="mechanic-card reveal reveal-delay-2">
+            <span class="mechanic-icon">🗺️</span>
+            <h3>Branching Paths</h3>
+            <p>Procedurally generated maps with multiple routes. Choose battles, events, shops, rest sites, and treasure rooms as you forge your path.</p>
+          </div>
+          <div class="mechanic-card reveal reveal-delay-3">
+            <span class="mechanic-icon">🛡️</span>
+            <h3>Multiple Heroes</h3>
+            <p>Select from unique heroes, each with distinct starting decks, special abilities, and mastery paths that unlock new cards and playstyles.</p>
+          </div>
+          <div class="mechanic-card reveal reveal-delay-1">
+            <span class="mechanic-icon">📈</span>
+            <h3>Meta Progression</h3>
+            <p>Earn XP across runs to unlock permanent upgrades, new cards, perk trees, and Ascension ranks that increase the challenge exponentially.</p>
+          </div>
+          <div class="mechanic-card reveal reveal-delay-2">
+            <span class="mechanic-icon">💀</span>
+            <h3>Boss Encounters</h3>
+            <p>Face terrifying bosses with unique mechanics and multi-phase battles. Adapt your strategy or be consumed by the darkness.</p>
+          </div>
+          <div class="mechanic-card reveal reveal-delay-3">
+            <span class="mechanic-icon">🎭</span>
+            <h3>Story Events</h3>
+            <p>Discover narrative events with meaningful choices that grant powerful relics, transform your deck, or challenge you with unexpected encounters.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section" id="game-cta">
+      <div class="ambient-grid"></div>
+      <div class="container">
+        <div class="cta-content reveal">
+          <h2>Ready to Forge Your Deck?</h2>
+          <p>Wishlist Melovar's Tale on Steam and be the first to enter the darkness.</p>
+          <div class="cta-actions">
+            <a href="steam.html" class="btn btn-primary btn-lg">Wishlist on Steam</a>
+            <a href="lore.html" class="btn btn-secondary btn-lg">Explore the Lore</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">⚔</div>
+            <span>Melovar's Tale</span>
+          </a>
+          <p>A premium roguelike deckbuilder card game. Forge your deck, face the darkness, and write your tale.</p>
+        </div>
+        <div class="footer-nav">
+          <h4 class="footer-heading">Explore</h4>
+          <div class="footer-links">
+            <a href="game.html">The Game</a>
+            <a href="art.html">Art Gallery</a>
+            <a href="lore.html">Lore & World</a>
+            <a href="developer.html">Developer</a>
+            <a href="steam.html">Steam</a>
+          </div>
+        </div>
+        <div class="footer-connect">
+          <h4 class="footer-heading">Connect</h4>
+          <div class="footer-social">
+            <a href="#" aria-label="Discord" title="Discord">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286z"/></svg>
+            </a>
+            <a href="#" aria-label="Twitter / X" title="Twitter / X">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube" title="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Melovar's Tale. All rights reserved.</span>
+        <span>A Dark Fantasy Deckbuilder</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

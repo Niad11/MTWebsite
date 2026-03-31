@@ -1,0 +1,183 @@
+/* ============================================
+   MELOVAR'S TALE — Steam Wishlist Page
+   ============================================ */
+
+/* ── Steam Hero ── */
+.steam-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.steam-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.steam-hero-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.steam-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    hsla(220, 30%, 5%, 0.6) 0%,
+    hsla(220, 30%, 5%, 0.8) 50%,
+    var(--surface-950) 100%
+  );
+  z-index: 1;
+}
+
+.steam-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: var(--space-4xl) var(--space-xl);
+}
+
+.steam-hero-content .steam-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--fire-400);
+  border: 1px solid hsla(20, 100%, 50%, 0.3);
+  background: hsla(20, 100%, 50%, 0.08);
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-xl);
+}
+
+.steam-hero-content h1 {
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  background: var(--gradient-azure-fire);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--space-lg);
+  line-height: 1.1;
+}
+
+.steam-hero-content .steam-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-2xl);
+  line-height: 1.7;
+  max-width: 50ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.steam-cta-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.steam-cta-group .btn-primary {
+  font-size: 1.1rem;
+  padding: 1.2rem 3rem;
+}
+
+.steam-cta-group .steam-note {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+
+/* ── Features Strip ── */
+.steam-features {
+  position: relative;
+  padding: var(--space-5xl) 0;
+}
+
+.steam-features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+}
+
+.steam-feature {
+  text-align: center;
+  padding: var(--space-2xl) var(--space-lg);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  transition: all var(--transition-base);
+}
+
+.steam-feature:hover {
+  transform: translateY(-4px);
+  border-color: var(--glass-border-hover);
+  box-shadow: var(--shadow-card);
+}
+
+.steam-feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-lg);
+  display: block;
+}
+
+.steam-feature h3 {
+  font-size: 1rem;
+  margin-bottom: var(--space-sm);
+}
+
+.steam-feature p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ── Trailer Section ── */
+.trailer-section {
+  position: relative;
+  padding: var(--space-5xl) 0;
+}
+
+.trailer-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-elevated);
+  position: relative;
+}
+
+.trailer-wrapper video {
+  width: 100%;
+  display: block;
+  border-radius: var(--radius-xl);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .steam-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steam-hero {
+    min-height: 80vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .steam-features-grid {
+    grid-template-columns: 1fr;
+  }
+}

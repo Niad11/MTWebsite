@@ -1,0 +1,252 @@
+/* ============================================
+   MELOVAR'S TALE — The Game Page
+   ============================================ */
+
+/* ── Page Hero ── */
+.game-hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.game-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.game-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.game-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    hsla(220, 30%, 5%, 0.2) 0%,
+    hsla(220, 30%, 5%, 0.6) 50%,
+    var(--surface-950) 100%
+  );
+  z-index: 1;
+}
+
+.game-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: var(--space-4xl) 0;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  width: 100%;
+  padding-left: var(--space-xl);
+  padding-right: var(--space-xl);
+}
+
+.game-hero-content h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  background: var(--gradient-azure-fire);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--space-md);
+}
+
+.game-hero-content .hero-tagline {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  max-width: 55ch;
+  line-height: 1.7;
+}
+
+/* ── Pillar Section ── */
+.pillar-section {
+  position: relative;
+  padding: var(--space-5xl) 0;
+}
+
+.pillar-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4xl);
+  align-items: center;
+  margin-bottom: var(--space-5xl);
+}
+
+.pillar-block:last-child {
+  margin-bottom: 0;
+}
+
+.pillar-block.reversed .pillar-text {
+  order: 2;
+}
+
+.pillar-block.reversed .pillar-media {
+  order: 1;
+}
+
+.pillar-text h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin-bottom: var(--space-lg);
+}
+
+.pillar-text h2 .text-azure {
+  color: var(--azure-400);
+  text-shadow: var(--glow-text-azure);
+}
+
+.pillar-text h2 .text-fire {
+  color: var(--fire-400);
+  text-shadow: var(--glow-text-fire);
+}
+
+.pillar-text p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: var(--space-lg);
+  font-size: 1.02rem;
+}
+
+.pillar-text .pillar-stats {
+  display: flex;
+  gap: var(--space-2xl);
+  margin-top: var(--space-xl);
+}
+
+.pillar-stat-item {
+  text-align: center;
+}
+
+.pillar-stat-number {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.pillar-stat-number.azure { color: var(--azure-400); text-shadow: var(--glow-text-azure); }
+.pillar-stat-number.fire { color: var(--fire-400); text-shadow: var(--glow-text-fire); }
+
+.pillar-stat-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: var(--space-xs);
+}
+
+.pillar-media {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-card);
+}
+
+.pillar-media img,
+.pillar-media video {
+  width: 100%;
+  display: block;
+  border-radius: var(--radius-xl);
+}
+
+.pillar-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--glass-border-hover);
+  pointer-events: none;
+}
+
+/* ── Mechanics Grid ── */
+.mechanics-section {
+  position: relative;
+  padding: var(--space-5xl) 0;
+}
+
+.mechanics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.mechanic-card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.mechanic-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-azure-fire);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.mechanic-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--glass-border-hover);
+  box-shadow: var(--shadow-card);
+}
+
+.mechanic-card:hover::before {
+  opacity: 1;
+}
+
+.mechanic-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-lg);
+  display: block;
+}
+
+.mechanic-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-sm);
+}
+
+.mechanic-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .pillar-block {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .pillar-block.reversed .pillar-text,
+  .pillar-block.reversed .pillar-media {
+    order: unset;
+  }
+
+  .mechanics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pillar-text .pillar-stats {
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+  }
+
+  .game-hero {
+    min-height: 50vh;
+  }
+}
