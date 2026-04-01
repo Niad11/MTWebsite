@@ -7,7 +7,7 @@
   position: relative;
   min-height: 65vh;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   overflow: hidden;
 }
 
@@ -21,7 +21,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 25%;
+  object-position: center 15%;
 }
 
 .dev-hero-overlay {
@@ -43,7 +43,10 @@
   max-width: var(--container-max);
   margin: 0 auto;
   width: 100%;
-  padding: var(--space-4xl) var(--space-xl);
+  padding-top: var(--space-4xl);
+  padding-bottom: var(--space-lg);
+  padding-left: var(--space-xl);
+  padding-right: var(--space-xl);
 }
 
 .dev-hero-content .dev-badge {
@@ -158,6 +161,31 @@
   display: grid;
   grid-template-columns: 300px 1fr;
   margin: var(--space-3xl) 0;
+  position: relative;
+}
+
+.character-bio-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 215, 0, 0.04) 50%,
+    transparent 100%
+  );
+  transform: translateX(-150%) skewX(-15deg);
+  animation: sweepGold 6s infinite cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.character-bio-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .character-bio-image {
@@ -217,11 +245,42 @@
   padding: var(--space-2xl);
   text-align: center;
   margin: var(--space-3xl) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes sweepGold {
+  0% { transform: translateX(-150%) skewX(-15deg); }
+  100% { transform: translateX(250%) skewX(-15deg); }
+}
+
+.fun-fact-banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 215, 0, 0.04) 50%,
+    transparent 100%
+  );
+  transform: translateX(-150%) skewX(-15deg);
+  animation: sweepGold 6s infinite cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.fun-fact-banner > * {
+  position: relative;
+  z-index: 1;
 }
 
 .fun-fact-banner .fun-label {
   font-family: var(--font-heading);
-  font-size: 0.75rem;
+  font-size: 1.15rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -233,7 +292,7 @@
   color: var(--text-secondary);
   font-size: 1rem;
   line-height: 1.7;
-  max-width: 60ch;
+  max-width: 80ch;
   margin: 0 auto;
 }
 

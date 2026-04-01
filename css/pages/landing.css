@@ -85,30 +85,45 @@
   padding-top: var(--header-height);
 }
 
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
   gap: var(--space-sm);
-  font-family: var(--font-heading);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--fire-400);
-  border: 1px solid hsla(20, 100%, 50%, 0.3);
-  background: hsla(20, 100%, 50%, 0.06);
-  padding: 0.45rem 1.2rem;
-  border-radius: var(--radius-full);
   margin-bottom: var(--space-xl);
   animation: fadeInUp 0.8s ease forwards;
 }
 
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-family: var(--font-heading);
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--fire-400);
+  border: 1px solid hsla(20, 100%, 50%, 0.3);
+  background: hsla(20, 100%, 50%, 0.06);
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-full);
+}
+
+.hero-badge.azure {
+  color: var(--azure-400);
+  border-color: hsla(210, 100%, 50%, 0.3);
+  background: hsla(210, 100%, 50%, 0.06);
+}
+
 .hero-badge .dot {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: var(--fire-400);
   animation: pulse-dot 2s ease-in-out infinite;
+}
+
+.hero-badge .dot.azure {
+  background: var(--azure-400);
 }
 
 .hero-title {

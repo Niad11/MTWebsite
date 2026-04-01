@@ -49,7 +49,7 @@
           <li><a href="lore.html" class="nav-link" id="nav-lore">Lore</a></li>
           <li><a href="developer.html" class="nav-link" id="nav-developer">Developer</a></li>
         </ul>
-        <a href="steam.html" class="nav-cta" id="nav-steam">Wishlist on Steam</a>
+        <a href="steam.html" class="nav-cta" id="nav-steam">Steam Guide</a>
       </nav>
 
       <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle mobile menu">
@@ -67,7 +67,7 @@
     <a href="art.html" class="nav-link">Art</a>
     <a href="lore.html" class="nav-link">Lore</a>
     <a href="developer.html" class="nav-link">Developer</a>
-    <a href="steam.html" class="nav-cta">Wishlist on Steam</a>
+    <a href="steam.html" class="nav-cta">Steam Guide</a>
   </div>
 
   <main>
@@ -84,9 +84,23 @@
       <canvas class="hero-particles" id="hero-particles"></canvas>
 
       <div class="hero-content">
-        <div class="hero-badge">
-          <span class="dot"></span>
-          Roguelike Deckbuilder
+        <div class="hero-badges">
+          <div class="hero-badge">
+            <span class="dot"></span>
+            ROGUELIKE DECKBUILDER
+          </div>
+          <div class="hero-badge azure">
+            <span class="dot azure"></span>
+            StS INSPIRED
+          </div>
+          <div class="hero-badge">
+            <span class="dot"></span>
+            REPLAYABILITY
+          </div>
+          <div class="hero-badge azure">
+            <span class="dot azure"></span>
+            ENDLESS FUN
+          </div>
         </div>
 
         <h1 class="hero-title">
@@ -95,14 +109,13 @@
         </h1>
 
         <p class="hero-subtitle">
-          In a world consumed by darkness, forge your deck, master ancient relics, 
-          and carve your path through a tale of fire and shadow. Every run tells a different story.
+          Every run tells a different story and you will meet the unique denizens of this world.
         </p>
 
         <div class="hero-actions">
           <a href="steam.html" class="btn btn-primary btn-lg" id="hero-cta-steam">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-            Wishlist on Steam
+            Buy on Steam
           </a>
           <a href="game.html" class="btn btn-secondary btn-lg" id="hero-cta-explore">
             Explore the Game
@@ -115,126 +128,16 @@
             <div class="hero-stat-label">Unique Cards</div>
           </div>
           <div class="hero-stat">
-            <div class="hero-stat-number azure" data-count="125" data-suffix="+">0</div>
+            <div class="hero-stat-number azure" data-count="100" data-suffix="+">0</div>
             <div class="hero-stat-label">Powerful Relics</div>
           </div>
           <div class="hero-stat">
-            <div class="hero-stat-number fire" data-count="80" data-suffix="+">0</div>
+            <div class="hero-stat-number fire" data-count="85" data-suffix="+">0</div>
             <div class="hero-stat-label">Dynamic Enemies</div>
           </div>
           <div class="hero-stat">
-            <div class="hero-stat-number azure" data-count="60" data-suffix="+">0</div>
+            <div class="hero-stat-number azure" data-count="70" data-suffix="+">0</div>
             <div class="hero-stat-label">Special Events</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════
-         FEATURES SECTION
-         ══════════════════════════════════════════ -->
-    <section class="section features-section" id="features-section">
-      <div class="ambient-grid"></div>
-      <div class="container">
-        <div class="section-heading reveal">
-          <h2>Forge Your Path</h2>
-          <span class="heading-line"></span>
-          <p>A deckbuilder that rewards strategy, creativity, and daring. Every choice shapes your journey.</p>
-        </div>
-
-        <div class="features-grid">
-          <!-- Feature 1 -->
-          <div class="feature-card reveal reveal-delay-1" id="feature-cards">
-            <div class="feature-card-icon fire">
-              <img src="assets/icons/icon-cards.png" alt="" loading="lazy">
-            </div>
-            <h3>300+ Unique Cards</h3>
-            <p>Build devastating combos from an ever-expanding pool of attack, defense, and skill cards — each with stunning hand-crafted art.</p>
-          </div>
-
-          <!-- Feature 2 -->
-          <div class="feature-card reveal reveal-delay-2" id="feature-relics">
-            <div class="feature-card-icon azure">
-              <img src="assets/icons/icon-relics.png" alt="" loading="lazy">
-            </div>
-            <h3>125+ Relics</h3>
-            <p>Discover powerful artifacts that reshape your strategy. Stack synergies, trigger chains, and unlock devastating combinations.</p>
-          </div>
-
-          <!-- Feature 3 -->
-          <div class="feature-card reveal reveal-delay-3" id="feature-roguelike">
-            <div class="feature-card-icon fire">
-              <img src="assets/icons/icon-roguelike.png" alt="" loading="lazy">
-            </div>
-            <h3>Roguelike Depth</h3>
-            <p>No two runs are the same. Procedurally generated paths, branching events, and escalating challenges create infinite replayability.</p>
-          </div>
-
-          <!-- Feature 4 -->
-          <div class="feature-card reveal reveal-delay-1" id="feature-heroes">
-            <div class="feature-card-icon azure">
-              <img src="assets/icons/icon-heroes.png" alt="" loading="lazy">
-            </div>
-            <h3>Multiple Heroes</h3>
-            <p>Choose your champion, each with unique starting decks, abilities, and mastery paths that unlock new cards and playstyles.</p>
-          </div>
-
-          <!-- Feature 5 -->
-          <div class="feature-card reveal reveal-delay-2" id="feature-bosses">
-            <div class="feature-card-icon fire">
-              <img src="assets/icons/icon-bosses.png" alt="" loading="lazy">
-            </div>
-            <h3>Epic Boss Battles</h3>
-            <p>Face terrifying adversaries with unique mechanics and attack patterns. Adapt your strategy or be consumed by the darkness.</p>
-          </div>
-
-          <!-- Feature 6 -->
-          <div class="feature-card reveal reveal-delay-3" id="feature-meta">
-            <div class="feature-card-icon azure">
-              <img src="assets/icons/icon-progression.png" alt="" loading="lazy">
-            </div>
-            <h3>Meta Progression</h3>
-            <p>Unlock permanent upgrades, discover hero mastery paths, and climb the Ascension ranks for ever-greater challenges.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════
-         CHARACTERS SECTION
-         ══════════════════════════════════════════ -->
-    <section class="section characters-section" id="characters-section">
-      <div class="ambient-grid"></div>
-      <div class="container">
-        <div class="section-heading reveal">
-          <h2>Clash of Legends</h2>
-          <span class="heading-line"></span>
-          <p>Heroes rise. Villains reign. Your destiny is written in the cards you play.</p>
-        </div>
-
-        <div class="characters-grid">
-          <!-- Lord Melovar -->
-          <div class="character-card reveal reveal-delay-1" id="character-melovar">
-            <div class="character-card-image-wrapper">
-              <img src="assets/images/lord-melovar.jpg" alt="Lord Melovar - The Protagonist" class="character-card-image" loading="lazy">
-            </div>
-            <div class="character-card-content">
-              <div class="character-card-title azure">The Protagonist</div>
-              <h3 class="character-card-name">Lord Melovar</h3>
-              <p class="character-card-desc">A warrior forged in fire and prophecy, Melovar wields an ancient flaming blade and commands arcane lightning. The fate of the realm rests upon his shoulders.</p>
-            </div>
-          </div>
-
-          <!-- Blood Knight Draefus -->
-          <div class="character-card reveal reveal-delay-2" id="character-draefus">
-            <div class="character-card-image-wrapper">
-              <img src="assets/images/blood-knight-draefus-still.jpg" alt="Blood Knight Draefus - The Antagonist" class="character-card-image" loading="lazy" style="object-position: center 20%;">
-            </div>
-            <div class="character-card-content">
-              <div class="character-card-title fire">The Antagonist</div>
-              <h3 class="character-card-name">Blood Knight Draefus</h3>
-              <p class="character-card-desc">Commander of the undying legion, Draefus towers over the battlefield in blood-soaked crimson armor. His dark army marches to extinguish all hope.</p>
-            </div>
           </div>
         </div>
       </div>
@@ -265,14 +168,11 @@
       <div class="ambient-grid"></div>
       <div class="container">
         <div class="cta-content reveal">
-          <div class="badge badge-fire" style="margin-bottom: var(--space-xl);">
-            ⚔ Coming Soon
-          </div>
           <h2>Write Your Tale</h2>
-          <p>Wishlist Melovar's Tale on Steam and be the first to know when the darkness arrives.</p>
+          <p>Support us and buy Melovar's Tale on Steam. Be the first to challenge the darkness and invest in the future of Eodolas.</p>
           <div class="cta-actions">
             <a href="steam.html" class="btn btn-primary btn-lg" id="cta-steam">
-              Wishlist on Steam
+              Buy on Steam
             </a>
             <a href="lore.html" class="btn btn-secondary btn-lg" id="cta-lore">
               Discover the Lore
