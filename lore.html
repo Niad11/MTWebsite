@@ -61,7 +61,7 @@
     <!-- VIDEO HERO -->
     <section class="lore-hero" id="lore-hero">
       <div class="lore-hero-video">
-        <video autoplay muted loop playsinline>
+        <video autoplay muted playsinline id="lore-hero-video">
           <source src="assets/website_images/Melovar - Web Video File.mp4" type="video/mp4">
         </video>
       </div>
@@ -251,7 +251,7 @@
 
         <div class="equipment-card reveal">
           <div class="equipment-icon">
-            <video autoplay muted loop playsinline>
+            <video autoplay muted playsinline id="sword-relic-video">
               <source src="assets/relics/melovars_sword.mp4" type="video/mp4">
             </video>
           </div>
@@ -327,5 +327,21 @@
 
   <script src="js/nav.js"></script>
   <script src="js/animations.js"></script>
+  <script>
+    // Replay videos when they scroll into view (no looping)
+    document.querySelectorAll('video[autoplay]').forEach(video => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            video.currentTime = 0;
+            video.play();
+          } else {
+            video.pause();
+          }
+        });
+      }, { threshold: 0.3 });
+      observer.observe(video);
+    });
+  </script>
 </body>
 </html>

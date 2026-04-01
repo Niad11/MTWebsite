@@ -155,27 +155,32 @@
 }
 
 .feature-card-icon {
-  width: 56px;
-  height: 56px;
+  width: 64px;
+  height: 64px;
   border-radius: var(--radius-lg);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
   margin-bottom: var(--space-lg);
   position: relative;
+  overflow: hidden;
+}
+
+.feature-card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
 }
 
 .feature-card-icon.azure {
-  background: hsla(210, 100%, 50%, 0.12);
-  color: var(--azure-400);
-  box-shadow: inset 0 0 20px hsla(210, 100%, 50%, 0.1);
+  box-shadow: 0 0 20px hsla(210, 100%, 50%, 0.2), inset 0 0 20px hsla(210, 100%, 50%, 0.1);
+  border: 1px solid hsla(210, 100%, 50%, 0.2);
 }
 
 .feature-card-icon.fire {
-  background: hsla(20, 100%, 50%, 0.12);
-  color: var(--fire-400);
-  box-shadow: inset 0 0 20px hsla(20, 100%, 50%, 0.1);
+  box-shadow: 0 0 20px hsla(20, 100%, 50%, 0.2), inset 0 0 20px hsla(20, 100%, 50%, 0.1);
+  border: 1px solid hsla(20, 100%, 50%, 0.2);
 }
 
 .feature-card h3 {
@@ -309,14 +314,17 @@
   letter-spacing: 0.1em;
 }
 
-/* ── Ambient Grid Overlay ── */
+/* ── Ambient Background Overlay ── */
 .ambient-grid {
   position: absolute;
   inset: 0;
   background: 
-    linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
-  background-size: 50px 50px;
+    radial-gradient(ellipse 70% 50% at 15% 30%, hsla(210, 100%, 45%, 0.12) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 50% at 85% 70%, hsla(20, 100%, 50%, 0.10) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 50% 0%, hsla(210, 80%, 50%, 0.08) 0%, transparent 55%),
+    radial-gradient(ellipse 80% 50% at 50% 100%, hsla(220, 60%, 15%, 0.25) 0%, transparent 60%),
+    radial-gradient(circle at 30% 80%, hsla(20, 100%, 45%, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 70% 20%, hsla(210, 100%, 50%, 0.06) 0%, transparent 50%);
   pointer-events: none;
   z-index: 0;
 }
