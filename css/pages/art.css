@@ -124,9 +124,9 @@
 }
 
 .gallery-item:hover {
-  transform: translateY(-4px) scale(1.02);
+  transform: translateY(-3px);
   border-color: var(--glass-border-hover);
-  box-shadow: var(--shadow-elevated), var(--glow-azure-sm);
+  box-shadow: var(--shadow-elevated);
 }
 
 .gallery-item img,

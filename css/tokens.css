@@ -72,10 +72,10 @@
   --shadow-elevated: 0 16px 48px hsla(0, 0%, 0%, 0.5);
 
   /* ── Glassmorphism ── */
-  --glass-bg: hsla(220, 25%, 8%, 0.7);
-  --glass-bg-light: hsla(220, 25%, 12%, 0.6);
-  --glass-border: hsla(210, 40%, 40%, 0.15);
-  --glass-border-hover: hsla(210, 40%, 50%, 0.25);
+  --glass-bg: hsla(220, 20%, 9%, 0.55);
+  --glass-bg-light: hsla(220, 20%, 12%, 0.5);
+  --glass-border: hsla(210, 40%, 40%, 0.10);
+  --glass-border-hover: hsla(210, 40%, 50%, 0.20);
   --glass-blur: blur(20px);
 
   /* ── Typography ── */

@@ -132,26 +132,10 @@
   overflow: hidden;
 }
 
-.feature-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: var(--gradient-azure-fire);
-  opacity: 0;
-  transition: opacity var(--transition-base);
-}
-
 .feature-card:hover {
   border-color: var(--glass-border-hover);
-  transform: translateY(-4px);
+  transform: translateY(-2px);
   box-shadow: var(--shadow-card);
-}
-
-.feature-card:hover::before {
-  opacity: 1;
 }
 
 .feature-card-icon {
@@ -206,9 +190,9 @@
 }
 
 .character-card:hover {
-  transform: translateY(-6px) scale(1.02);
+  transform: translateY(-3px);
   border-color: var(--glass-border-hover);
-  box-shadow: var(--shadow-elevated), var(--glow-azure-sm);
+  box-shadow: var(--shadow-elevated);
 }
 
 .character-card-image {
