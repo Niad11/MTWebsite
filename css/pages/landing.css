@@ -312,26 +312,7 @@
   pointer-events: none;
 }
 
-.cta-content {
-  position: relative;
-  z-index: 1;
-}
 
-.cta-content h2 {
-  margin-bottom: var(--space-md);
-}
-
-.cta-content p {
-  margin: 0 auto var(--space-2xl);
-  font-size: 1.1rem;
-}
-
-.cta-actions {
-  display: flex;
-  justify-content: center;
-  gap: var(--space-md);
-  flex-wrap: wrap;
-}
 
 /* ── Animations ── */
 @keyframes fadeInUp {
