@@ -101,8 +101,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Specifically check paragraphs containing wishlist prompt
   if (isLaunched) {
     document.querySelectorAll('p').forEach(p => {
-      if (p.textContent.includes(Wishlist Melovar's Tale)) {
-        p.innerHTML = p.innerHTML.replace(Wishlist Melovar's Tale, Buy Melovar's Tale);
+      if (p.textContent.includes("Wishlist Melovar's Tale")) {
+        p.innerHTML = p.innerHTML.replace("Wishlist Melovar's Tale", "Buy Melovar's Tale");
       }
       if (p.textContent.includes('Wishlist now on')) {
         p.innerHTML = p.innerHTML.replace('Wishlist now on', 'Buy now on');

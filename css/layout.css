@@ -155,10 +155,13 @@
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--text-primary);
   border-radius: var(--radius-full);
   transition: transform var(--transition-base), opacity var(--transition-base);
 }
+
+.mobile-toggle span:nth-child(1) { background: var(--azure-400); }
+.mobile-toggle span:nth-child(2) { background: var(--gradient-azure-fire); }
+.mobile-toggle span:nth-child(3) { background: var(--fire-400); }
 
 .mobile-toggle.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
