@@ -42,7 +42,7 @@
   z-index: 2;
   text-align: center;
   max-width: 800px;
-  padding: var(--space-4xl) var(--space-xl);
+  padding: calc(var(--space-4xl) + 6rem) var(--space-xl) var(--space-4xl);
 }
 
 .lore-hero-content h1 {

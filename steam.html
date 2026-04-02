@@ -67,18 +67,99 @@
       </div>
       <div class="steam-hero-overlay"></div>
       <div class="steam-hero-content">
-        <h1>Purchase Now</h1>
+        <h1>Wishlist Now</h1>
         <p class="steam-subtitle">
           Forge your deck. Face the darkness. Write your tale.
         </p>
         <div class="steam-cta-group">
-          <a href="#" class="btn btn-primary btn-lg" id="steam-wishlist-btn">
+          <a href="https://store.steampowered.com/app/4582580/Melovars_Tale/" target="_blank" rel="noopener" class="btn btn-primary btn-lg" id="steam-wishlist-btn">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-            Buy on Steam
+            Wishlist on Steam
           </a>
         </div>
+        <p class="release-announcement" id="release-announcement"></p>
       </div>
     </section>
+
+    <style>
+      .release-announcement {
+        margin-top: var(--space-2xl);
+        font-family: var(--font-heading);
+        font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-align: center;
+        background: linear-gradient(135deg, var(--fire-300), #ffd700, var(--fire-400));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        min-height: 2.5em;
+        text-shadow: none;
+        line-height: 1.4;
+      }
+
+      .release-announcement .release-date {
+        background: linear-gradient(135deg, #ff6655, var(--fire-400), #ffd700);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        filter: drop-shadow(0 0 8px rgba(255, 150, 50, 0.3));
+      }
+
+      .release-announcement .cursor {
+        display: inline-block;
+        width: 3px;
+        height: 1.1em;
+        background: var(--fire-400);
+        margin-left: 2px;
+        vertical-align: text-bottom;
+        animation: blink 0.7s step-end infinite;
+      }
+
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+    </style>
+
+    <script>
+      (function() {
+        const fullText = "The planned release of Melovar's Tale is the 11th of May 2026! Join the adventure and battle the unrelenting force together!";
+        const dateStr = "11th of May 2026";
+        const el = document.getElementById('release-announcement');
+        let i = 0;
+        const cursor = document.createElement('span');
+        cursor.className = 'cursor';
+
+        function render(count) {
+          const typed = fullText.slice(0, count);
+          const dateStart = fullText.indexOf(dateStr);
+          const dateEnd = dateStart + dateStr.length;
+
+          if (count > dateStart && dateStart !== -1) {
+            const before = typed.slice(0, dateStart);
+            const dateTyped = typed.slice(dateStart, Math.min(count, dateEnd));
+            const after = count > dateEnd ? typed.slice(dateEnd) : '';
+            el.innerHTML = before + '<span class="release-date">' + dateTyped + '</span>' + after;
+          } else {
+            el.textContent = typed;
+          }
+          el.appendChild(cursor);
+        }
+
+        function type() {
+          if (i < fullText.length) {
+            i++;
+            render(i);
+            setTimeout(type, 40);
+          } else {
+            cursor.remove();
+          }
+        }
+
+        setTimeout(type, 800);
+      })();
+    </script>
 
     <!-- FEATURES STRIP -->
     <section class="section steam-features" id="steam-features">
