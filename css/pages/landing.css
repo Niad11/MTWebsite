@@ -421,3 +421,15 @@
     gap: var(--space-lg);
   }
 }
+
+/* ── Ultra-Wide Screen Constraints ( > 1920px ) ── */
+@media (min-width: 1921px) {
+  .hero-content {
+    /* Locks the left origin to its 1920px state and anchors it to the center viewport */
+    margin-left: calc(50vw - 960px + 153px); 
+  }
+  .hero-character {
+    /* Locks the right origin to its 1920px state and anchors it to the center viewport */
+    right: calc(50vw - 960px - 96px); 
+  }
+}
