@@ -54,4 +54,26 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.5 });
 
   counters.forEach(el => counterObserver.observe(el));
+
+  // ── Force Mobile Video Autoplay ──
+  // Fixes iOS/Android showing a play button instead of looping background videos
+  const bgVideos = document.querySelectorAll('video[autoplay]');
+  bgVideos.forEach(vid => {
+    // Force properties
+    vid.muted = true;
+    vid.loop = true;
+    vid.setAttribute('playsinline', '');
+    
+    // Attempt play immediately
+    const playPromise = vid.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(error => {
+        // Some browsers block auto-play. Adding a touch listener as a fallback.
+        console.log('Autoplay prevented by browser. Waiting for interaction.');
+        document.body.addEventListener('touchstart', () => {
+          vid.play().catch(e => console.log('Still prevented:', e));
+        }, { once: true });
+      });
+    }
+  });
 });
