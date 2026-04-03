@@ -75,6 +75,47 @@ document.addEventListener('DOMContentLoaded', () => {
   const now = new Date();
   const isLaunched = now >= launchDate;
 
+  // ── Countdown Timer (pre-launch only) ──
+  if (!isLaunched) {
+    const navSteam = document.querySelector('#nav-steam');
+    if (navSteam) {
+      const timer = document.createElement('div');
+      timer.className = 'nav-countdown';
+      timer.id = 'nav-countdown';
+      timer.innerHTML = `
+        <span class="countdown-label">LAUNCH</span>
+        <div class="countdown-units">
+          <div class="countdown-unit"><span class="cd-num" id="cd-days">--</span><span class="cd-lbl">D</span></div>
+          <span class="cd-sep">:</span>
+          <div class="countdown-unit"><span class="cd-num" id="cd-hours">--</span><span class="cd-lbl">H</span></div>
+          <span class="cd-sep">:</span>
+          <div class="countdown-unit"><span class="cd-num" id="cd-mins">--</span><span class="cd-lbl">M</span></div>
+          <span class="cd-sep">:</span>
+          <div class="countdown-unit"><span class="cd-num" id="cd-secs">--</span><span class="cd-lbl">S</span></div>
+        </div>
+      `;
+      navSteam.parentNode.insertBefore(timer, navSteam);
+
+      function updateCountdown() {
+        const diff = launchDate - new Date();
+        if (diff <= 0) {
+          timer.style.display = 'none';
+          return;
+        }
+        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const m = Math.floor((diff / (1000 * 60)) % 60);
+        const s = Math.floor((diff / 1000) % 60);
+        document.getElementById('cd-days').textContent = String(d).padStart(2, '0');
+        document.getElementById('cd-hours').textContent = String(h).padStart(2, '0');
+        document.getElementById('cd-mins').textContent = String(m).padStart(2, '0');
+        document.getElementById('cd-secs').textContent = String(s).padStart(2, '0');
+      }
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    }
+  }
+
   // Handle all Steam CTA buttons safely
   document.querySelectorAll('a').forEach(link => {
     // Only target CTAs
