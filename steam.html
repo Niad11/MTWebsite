@@ -61,7 +61,7 @@
     <!-- HERO - Video Background -->
     <section class="steam-hero" id="steam-hero">
       <div class="steam-hero-bg">
-        <video autoplay loop muted playsinline preload="auto">
+        <video autoplay muted playsinline preload="auto">
           <source src="assets/website_images/Melovar - Web Video File.mp4" type="video/mp4">
         </video>
       </div>
@@ -218,20 +218,5 @@
 
   <script src="js/nav.js"></script>
   <script src="js/animations.js"></script>
-  <script>
-    document.querySelectorAll('video[autoplay]').forEach(video => {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            video.currentTime = 0;
-            video.play();
-          } else {
-            video.pause();
-          }
-        });
-      }, { threshold: 0.3 });
-      observer.observe(video);
-    });
-  </script>
 </body>
 </html>

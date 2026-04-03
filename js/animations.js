@@ -55,25 +55,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
   counters.forEach(el => counterObserver.observe(el));
 
-  // ── Force Mobile Video Autoplay ──
-  // Fixes iOS/Android showing a play button instead of looping background videos
-  const bgVideos = document.querySelectorAll('video[autoplay]');
-  bgVideos.forEach(vid => {
-    // Force properties
+  // ── Video Play/Pause on Scroll ──
+  // Videos play from the start when 30% visible, pause when scrolled away
+  const allVideos = document.querySelectorAll('video[autoplay]');
+  allVideos.forEach(vid => {
+    // Ensure muted + playsinline for mobile compatibility
     vid.muted = true;
-    vid.loop = true;
     vid.setAttribute('playsinline', '');
-    
-    // Attempt play immediately
-    const playPromise = vid.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(error => {
-        // Some browsers block auto-play. Adding a touch listener as a fallback.
-        console.log('Autoplay prevented by browser. Waiting for interaction.');
-        document.body.addEventListener('touchstart', () => {
-          vid.play().catch(e => console.log('Still prevented:', e));
-        }, { once: true });
+
+    const videoObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          vid.currentTime = 0;
+          vid.play().catch(() => {
+            // Fallback: wait for first touch on mobile
+            document.body.addEventListener('touchstart', () => {
+              vid.currentTime = 0;
+              vid.play().catch(() => {});
+            }, { once: true });
+          });
+        } else {
+          vid.pause();
+        }
       });
-    }
+    }, { threshold: 0.3 });
+
+    videoObserver.observe(vid);
   });
 });
